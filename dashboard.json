@@ -1,0 +1,48 @@
+[
+    {
+        "id": "4493a8277c272b69",
+        "type": "ui_text_input",
+        "z": "480bd8712a3e79cf",
+        "name": "input_nombre",
+        "label": "Nombre Mascota",
+        "tooltip": "",
+        "group": "a8a72c7dd51e7afa",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 780,
+        "y": 480,
+        "wires": [
+            [
+                "e2174abaf28a7d89"
+            ]
+        ]
+    },
+    {
+        "id": "a8a72c7dd51e7afa",
+        "type": "ui_group",
+        "name": "Panel Admin",
+        "tab": "ea0c50bc33004915",
+        "order": 1,
+        "disp": true,
+        "width": 14,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ea0c50bc33004915",
+        "type": "ui_tab",
+        "name": "Administrador",
+        "icon": "",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]
