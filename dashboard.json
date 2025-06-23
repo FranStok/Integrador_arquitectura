@@ -1,5 +1,390 @@
 [
     {
+        "id": "480bd8712a3e79cf",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6bc2008059d9a2c4",
+        "type": "mqtt-broker",
+        "name": "mosquitto",
+        "broker": "test.mosquitto.org",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d3f67a98dd7a66d3",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f944cd7e21484866",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8abc76c422c8e3b5",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5c542a16c5f0c441",
+        "type": "ui_group",
+        "name": "Distancia",
+        "tab": "8abc76c422c8e3b5",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c65dbd2182c23869",
+        "type": "ui_group",
+        "name": "Boton",
+        "tab": "d3f67a98dd7a66d3",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cca6fd1edad1be62",
+        "type": "ui_tab",
+        "name": "Usuario",
+        "icon": "",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ea0c50bc33004915",
+        "type": "ui_tab",
+        "name": "Administrador",
+        "icon": "",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d782561eb959d45f",
+        "type": "ui_tab",
+        "name": "Login",
+        "icon": "",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ea5d5a9f62626b31",
+        "type": "ui_group",
+        "name": "Panel Usuario",
+        "tab": "cca6fd1edad1be62",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a8a72c7dd51e7afa",
+        "type": "ui_group",
+        "name": "Panel Admin",
+        "tab": "ea0c50bc33004915",
+        "order": 1,
+        "disp": true,
+        "width": 14,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e628e1304420b4f2",
+        "type": "ui_group",
+        "name": "Autenticacion",
+        "tab": "d782561eb959d45f",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "55e8d3c86997583a",
+        "type": "ui_spacer",
+        "z": "480bd8712a3e79cf",
+        "name": "spacer",
+        "group": "a8a72c7dd51e7afa",
+        "order": 1,
+        "width": 14,
+        "height": 1
+    },
+    {
+        "id": "cb64c824ffcb6414",
+        "type": "ui_spacer",
+        "z": "480bd8712a3e79cf",
+        "name": "spacer",
+        "group": "a8a72c7dd51e7afa",
+        "order": 6,
+        "width": 14,
+        "height": 1
+    },
+    {
+        "id": "6fd652d576d951be",
+        "type": "ui_spacer",
+        "z": "480bd8712a3e79cf",
+        "name": "spacer",
+        "group": "a8a72c7dd51e7afa",
+        "order": 10,
+        "width": 14,
+        "height": 1
+    },
+    {
+        "id": "3c1c2b3520c42724",
+        "type": "ui_spacer",
+        "z": "480bd8712a3e79cf",
+        "name": "spacer",
+        "group": "a8a72c7dd51e7afa",
+        "order": 15,
+        "width": 14,
+        "height": 1
+    },
+    {
+        "id": "a5619a973da4c809",
+        "type": "ui_spacer",
+        "z": "480bd8712a3e79cf",
+        "name": "spacer",
+        "group": "a8a72c7dd51e7afa",
+        "order": 19,
+        "width": 14,
+        "height": 1
+    },
+    {
+        "id": "b4982a024c011aa6",
+        "type": "ui_group",
+        "name": "Alarma & Sistema",
+        "tab": "cca6fd1edad1be62",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f5074336b5d76608",
+        "type": "ui_group",
+        "name": "Historial Detecciones",
+        "tab": "cca6fd1edad1be62",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d2db7e91a6e1734b",
+        "type": "ui_group",
+        "name": "Logout",
+        "tab": "cca6fd1edad1be62",
+        "order": 3,
+        "disp": false,
+        "width": "30",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "776e7a8fa293c36a",
+        "type": "ui_spacer",
+        "z": "480bd8712a3e79cf",
+        "name": "spacer",
+        "group": "f5074336b5d76608",
+        "order": 1,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "a22573f2484173e2",
+        "type": "ui_spacer",
+        "z": "480bd8712a3e79cf",
+        "name": "spacer",
+        "group": "f5074336b5d76608",
+        "order": 3,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "10b885b187dd7433",
+        "type": "ui_button",
+        "z": "480bd8712a3e79cf",
+        "name": "btnSilenciar",
+        "group": "b4982a024c011aa6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Silenciar Alarma",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "silenciar",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 990,
+        "y": 1740,
+        "wires": [
+            [
+                "2b6c9b59d9f45cb7"
+            ]
+        ]
+    },
+    {
+        "id": "2b6c9b59d9f45cb7",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "Silenciar Alarma",
+        "func": "// msg.payload === 'silenciar'\n// Guardamos una variable de flujo para indicar que está silenciado\nflow.set(\"silenciado\", true);\n// Opcional: devolvemos un mensaje para otros nodos\nmsg.payload = \"silenciar\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 1740,
+        "wires": [
+            [
+                "7b1707ef99a1112d"
+            ]
+        ]
+    },
+    {
         "id": "4493a8277c272b69",
         "type": "ui_text_input",
         "z": "480bd8712a3e79cf",
@@ -26,23 +411,1696 @@
         ]
     },
     {
-        "id": "a8a72c7dd51e7afa",
-        "type": "ui_group",
-        "name": "Panel Admin",
-        "tab": "ea0c50bc33004915",
-        "order": 1,
-        "disp": true,
-        "width": 14,
-        "collapse": false,
-        "className": ""
+        "id": "ac7574ca28c42962",
+        "type": "ui_text_input",
+        "z": "480bd8712a3e79cf",
+        "name": "input_especie",
+        "label": "Especie",
+        "tooltip": "",
+        "group": "a8a72c7dd51e7afa",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 780,
+        "y": 520,
+        "wires": [
+            [
+                "6e5cf76970e99d61"
+            ]
+        ]
     },
     {
-        "id": "ea0c50bc33004915",
-        "type": "ui_tab",
-        "name": "Administrador",
+        "id": "22a00b2f8c3deb25",
+        "type": "ui_text_input",
+        "z": "480bd8712a3e79cf",
+        "name": "input_edad",
+        "label": "Edad",
+        "tooltip": "",
+        "group": "a8a72c7dd51e7afa",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 770,
+        "y": 560,
+        "wires": [
+            [
+                "17c3c84d682dc2b6"
+            ]
+        ]
+    },
+    {
+        "id": "f75b9166431b3767",
+        "type": "ui_button",
+        "z": "480bd8712a3e79cf",
+        "name": "btnAddMascota",
+        "group": "a8a72c7dd51e7afa",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Agregar Mascota",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
         "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 700,
+        "y": 660,
+        "wires": [
+            [
+                "5e53033ca02fdc94"
+            ]
+        ]
+    },
+    {
+        "id": "109dfcc455c78522",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "Agregar Mascota",
+        "func": "let mascotas = flow.get(\"mascotas\") || [];\nlet nuevaMascota = msg.payload.split(\",\");\nconst index = mascotas.findIndex(mascota => mascota[\"id\"] === nuevaMascota[0]);\n\nif(index==-1){\n    mascotas.push({\n        id: nuevaMascota[0],\n        nombre: nuevaMascota[1],\n        especie: nuevaMascota[2],\n        edad: nuevaMascota[3],\n    });\n}else{\n    mascotas[index] = {\n        id: nuevaMascota[0],\n        nombre: nuevaMascota[1],\n        especie: nuevaMascota[2],\n        edad: nuevaMascota[3],\n    }\n}\n\n\nflow.set(\"mascotas\", mascotas);\n\nmsg.payload = mascotas;  // devolvemos la lista actualizada\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1550,
+        "y": 560,
+        "wires": [
+            [
+                "146c51593938752c"
+            ]
+        ]
+    },
+    {
+        "id": "146c51593938752c",
+        "type": "ui_template",
+        "z": "480bd8712a3e79cf",
+        "group": "a8a72c7dd51e7afa",
+        "name": "tablaMascotas",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "format": "<table border=\"1\" style=\"width:100%; border-collapse: collapse; text-align:center;\">\n    <tr>\n        <th style=\"text-align:center\">ID RFID</th>\n        <th style=\"text-align:center\">Nombre</th>\n        <th style=\"text-align:center\">Especie</th>\n        <th style=\"text-align:center\">Edad</th>\n    </tr>\n    <tr ng-repeat=\"row in msg.payload\">\n        <td style=\"text-align:center\">{{row.id}}</td>\n        <td style=\"text-align:center\">{{row.nombre}}</td>\n        <td style=\"text-align:center\">{{row.especie}}</td>\n        <td style=\"text-align:center\">{{row.edad}}</td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1780,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12e0c1eb65b4036f",
+        "type": "ui_text_input",
+        "z": "480bd8712a3e79cf",
+        "name": "input_hora_inicio",
+        "label": "Horario Inicio",
+        "tooltip": "",
+        "group": "a8a72c7dd51e7afa",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 790,
+        "y": 260,
+        "wires": [
+            [
+                "d37a6095ef677e38"
+            ]
+        ]
+    },
+    {
+        "id": "f0e435109127a58b",
+        "type": "ui_text_input",
+        "z": "480bd8712a3e79cf",
+        "name": "input_hora_fin",
+        "label": "Horario Fin",
+        "tooltip": "",
+        "group": "a8a72c7dd51e7afa",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 780,
+        "y": 300,
+        "wires": [
+            [
+                "850a5ab6936842df"
+            ]
+        ]
+    },
+    {
+        "id": "8bfe04119d5c630a",
+        "type": "ui_button",
+        "z": "480bd8712a3e79cf",
+        "name": "btnGuardarHorario",
+        "group": "a8a72c7dd51e7afa",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Guardar Horario",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 710,
+        "y": 820,
+        "wires": [
+            [
+                "62ca3dc3ebc3a2db"
+            ]
+        ]
+    },
+    {
+        "id": "62ca3dc3ebc3a2db",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "Guardar Horario",
+        "func": "const horario = {\n  inicio: flow.get(\"nuevoInicio\").payload,\n  fin:    flow.get(\"nuevoFin\").payload\n};\nflow.set(\"horarioActivo\", horario);\nmsg.payload = horario;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 820,
+        "wires": [
+            [
+                "2748596badfad048",
+                "eb092c07a52574b2"
+            ]
+        ]
+    },
+    {
+        "id": "2748596badfad048",
+        "type": "ui_text",
+        "z": "480bd8712a3e79cf",
+        "group": "a8a72c7dd51e7afa",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "name": "txtHorario",
+        "label": "Horario Activo",
+        "format": "Desde {{msg.payload.inicio}} hasta {{msg.payload.fin}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1280,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "efdcd27d788c4f6c",
+        "type": "ui_text_input",
+        "z": "480bd8712a3e79cf",
+        "name": "input_email",
+        "label": "Email Notificaciones",
+        "tooltip": "",
+        "group": "a8a72c7dd51e7afa",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "email",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 770,
+        "y": 120,
+        "wires": [
+            [
+                "db9aedcf71acb946"
+            ]
+        ]
+    },
+    {
+        "id": "6b1f42ce736722d6",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "SET nuevoInicio",
+        "func": "flow.set(\"nuevoInicio\", msg);\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "df00c5b1c575722c",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "SET nuevoFin",
+        "func": "flow.set(\"nuevoFin\", msg);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db9aedcf71acb946",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "SET nuevoEmail",
+        "func": "// 1) almacena el texto del input en flow  \nflow.set(\"notificarEmail\", msg.payload);  \nreturn null; \n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2174abaf28a7d89",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "SET nuevoNombre",
+        "func": "flow.set(\"nuevoNombre\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e5cf76970e99d61",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "SET nuevoEspecie",
+        "func": "flow.set(\"nuevoEspecie\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "17c3c84d682dc2b6",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "SET nuevoEdad",
+        "func": "flow.set(\"nuevoEdad\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e4107e7f9c8d41d",
+        "type": "ui_ui_control",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "events": "all",
+        "x": 1000,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b73c136cdf07a834",
+        "type": "inject",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 1080,
+        "wires": [
+            [
+                "37dd1e43ca2e1bac"
+            ]
+        ]
+    },
+    {
+        "id": "37dd1e43ca2e1bac",
+        "type": "change",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"tabs\":{\t        \"hide\":[\t            \"Usuario\",\t            \"Administrador\"\t        ]\t    }\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 1080,
+        "wires": [
+            [
+                "5e4107e7f9c8d41d"
+            ]
+        ]
+    },
+    {
+        "id": "1450c27eb3c5541c",
+        "type": "ui_form",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "label": "",
+        "group": "e628e1304420b4f2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "user name",
+                "value": "user name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "password",
+                "value": "password",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "user name": "",
+            "password": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 470,
+        "y": 1300,
+        "wires": [
+            [
+                "474255ddf31d08df",
+                "394516c147496814"
+            ]
+        ]
+    },
+    {
+        "id": "474255ddf31d08df",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "adminLogin",
+        "func": "var msg1={};\nvar msg2={};\n\nif((msg.payload[\"user name\"] == \"admin\") && (msg.payload.password == \"1234\")){\n    msg1.payload = \"Login Success!\";\n    return [msg1,null]\n}else{\n    msg2.payload = \"LOGIN FAILURE\";\n    return [null,msg2]\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1300,
+        "wires": [
+            [
+                "4e5d854a8ecb428f",
+                "63e9d0b0bdbdf043"
+            ],
+            [
+                "63e9d0b0bdbdf043"
+            ]
+        ]
+    },
+    {
+        "id": "4e5d854a8ecb428f",
+        "type": "change",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"tabs\":{\t        \"show\":[\t            \"Usuario\",\t            \"Administrador\"\t        ]\t    }\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 1280,
+        "wires": [
+            [
+                "3a4a9b30261f1285"
+            ]
+        ]
+    },
+    {
+        "id": "3a4a9b30261f1285",
+        "type": "change",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"tab\":\t    \"Administrador\"\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 1360,
+        "wires": [
+            [
+                "05d67f54d2bf7ada"
+            ]
+        ]
+    },
+    {
+        "id": "05d67f54d2bf7ada",
+        "type": "ui_ui_control",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "events": "all",
+        "x": 1260,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "394516c147496814",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "function 3",
+        "func": "var msg1={};\nvar msg2={};\n\n\nif((msg.payload[\"user name\"] == \"user\") && (msg.payload.password == \"1234\")){\n    msg1.payload = \"Login Success!\";\n    return [msg1,null]\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 1440,
+        "wires": [
+            [
+                "7086f7a0dd787381",
+                "a59ed6de4009b0bc"
+            ],
+            [
+                "a59ed6de4009b0bc"
+            ]
+        ]
+    },
+    {
+        "id": "74b9a7e4e43efa63",
+        "type": "ui_ui_control",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "events": "all",
+        "x": 1260,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7086f7a0dd787381",
+        "type": "change",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"tabs\":{\t        \"show\":[\t            \"Administrador\"\t        ]\t    }\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1440,
+        "wires": [
+            [
+                "9edb53c764d901ea"
+            ]
+        ]
+    },
+    {
+        "id": "9edb53c764d901ea",
+        "type": "change",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"tab\":\t    \"Usuario\"\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 1500,
+        "wires": [
+            [
+                "74b9a7e4e43efa63"
+            ]
+        ]
+    },
+    {
+        "id": "63e9d0b0bdbdf043",
+        "type": "ui_toast",
+        "z": "480bd8712a3e79cf",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 850,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "a59ed6de4009b0bc",
+        "type": "ui_toast",
+        "z": "480bd8712a3e79cf",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 850,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "5353260f12541798",
+        "type": "ui_button",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "group": "a8a72c7dd51e7afa",
+        "order": 20,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Log Out",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 420,
+        "y": 1160,
+        "wires": [
+            [
+                "9f44a201a596d640"
+            ]
+        ]
+    },
+    {
+        "id": "9f44a201a596d640",
+        "type": "change",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"tabs\":{\t        \"hide\":[\t            \"Administrador\"\t        ],\t        \"show\":[\t            \"Login\"\t        ]\t    }\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1160,
+        "wires": [
+            [
+                "e0ebfc5447df0357"
+            ]
+        ]
+    },
+    {
+        "id": "e0ebfc5447df0357",
+        "type": "change",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"tab\":\t    \"Login\"\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 1160,
+        "wires": [
+            [
+                "5e4107e7f9c8d41d"
+            ]
+        ]
+    },
+    {
+        "id": "592917647859e544",
+        "type": "ui_text",
+        "z": "480bd8712a3e79cf",
+        "group": "f5074336b5d76608",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Estado:",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1420,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "5dd4040df2582122",
+        "type": "ui_gauge",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "group": "f5074336b5d76608",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Presencia",
+        "label": "units",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1540,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "b360b2461727f923",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "BooleanToText",
+        "func": "if (msg.payload === true) {\n  msg.payload = \"Presencia de Mascota Detectada.\";\n} else {\n  msg.payload = \"Sin Presencia en ventana.\";\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 2040,
+        "wires": [
+            [
+                "592917647859e544"
+            ]
+        ]
+    },
+    {
+        "id": "4bd603a800e883be",
+        "type": "ui_template",
+        "z": "480bd8712a3e79cf",
+        "group": "a8a72c7dd51e7afa",
+        "name": "",
+        "order": 21,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"height:20px\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1500,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b1707ef99a1112d",
+        "type": "mqtt out",
+        "z": "480bd8712a3e79cf",
+        "name": "Silenciar alarma",
+        "topic": "arqAvanzada/alarma",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc2008059d9a2c4",
+        "x": 1400,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "020fa2d68b579416",
+        "type": "mqtt out",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "topic": "arqAvanzada/informacionMascota",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc2008059d9a2c4",
+        "x": 1260,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "05c6f6cd274e9be0",
+        "type": "inject",
+        "z": "480bd8712a3e79cf",
+        "name": "InitialInject",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 1090,
+        "y": 2120,
+        "wires": [
+            [
+                "b360b2461727f923",
+                "0f9bc28ba5463499"
+            ]
+        ]
+    },
+    {
+        "id": "52d1dd45b8a7ef3c",
+        "type": "mqtt in",
+        "z": "480bd8712a3e79cf",
+        "name": "IN: presenciaMascotaFecha",
+        "topic": "arqAvanzada/presenciaMascotaFecha",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "6bc2008059d9a2c4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 1920,
+        "wires": [
+            [
+                "53a82f3cadbaa9ac"
+            ]
+        ]
+    },
+    {
+        "id": "0941800c14d5094f",
+        "type": "mqtt in",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "topic": "arqAvanzada/presenciaMascota",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "6bc2008059d9a2c4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 730,
+        "y": 2040,
+        "wires": [
+            [
+                "b360b2461727f923",
+                "91221746bea274ae",
+                "c7b4e4b457a0b975",
+                "0f9bc28ba5463499"
+            ]
+        ]
+    },
+    {
+        "id": "b03ee993aba23ed6",
+        "type": "inject",
+        "z": "480bd8712a3e79cf",
+        "name": "InitialInject",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Sin datos.",
+        "payloadType": "str",
+        "x": 250,
+        "y": 2000,
+        "wires": [
+            [
+                "53a82f3cadbaa9ac"
+            ]
+        ]
+    },
+    {
+        "id": "53a82f3cadbaa9ac",
+        "type": "ui_text",
+        "z": "480bd8712a3e79cf",
+        "group": "b4982a024c011aa6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fecha",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 570,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "1db578893ee9c1c7",
+        "type": "inject",
+        "z": "480bd8712a3e79cf",
+        "name": "InitialInject",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 270,
+        "y": 2160,
+        "wires": [
+            [
+                "cc9fed274b45f507"
+            ]
+        ]
+    },
+    {
+        "id": "cc9fed274b45f507",
+        "type": "ui_switch",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "label": "Servicio",
+        "tooltip": "",
+        "group": "b4982a024c011aa6",
         "order": 3,
-        "disabled": false,
-        "hidden": false
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 460,
+        "y": 2160,
+        "wires": [
+            [
+                "abddb21d5de2e3d4"
+            ]
+        ]
+    },
+    {
+        "id": "abddb21d5de2e3d4",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "Guardar SystemStatus",
+        "func": "global.set(\"systemStatus\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 2260,
+        "wires": [
+            [
+                "d65736bfeb7cb7fe"
+            ]
+        ]
+    },
+    {
+        "id": "d65736bfeb7cb7fe",
+        "type": "mqtt out",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "topic": "arqAvanzada/systemStatus/toggle",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc2008059d9a2c4",
+        "x": 800,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "32165c1fa33c949d",
+        "type": "mqtt in",
+        "z": "480bd8712a3e79cf",
+        "name": "SystemStatusCheck",
+        "topic": "arqAvanzada/SystemStatus/check",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "6bc2008059d9a2c4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 2340,
+        "wires": [
+            [
+                "1f70b514a402826c"
+            ]
+        ]
+    },
+    {
+        "id": "1f70b514a402826c",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "Leer y Republish SystemStatus",
+        "func": "// Function 2 ─ al recibir el 'check' leo el estado que guardé\nlet estado = global.get(\"systemStatus\");\nif (estado === undefined) {\n    estado = \"false\";\n}\nmsg.payload = estado;\nmsg.topic = \"arqAvanzada/toggleSystemStatus\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 2340,
+        "wires": [
+            [
+                "d65736bfeb7cb7fe"
+            ]
+        ]
+    },
+    {
+        "id": "c7b4e4b457a0b975",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "Acumular Historial",
+        "func": "// 1) Leer array histórico de flow (o crear uno nuevo)\nlet historial = flow.get(\"historialFechas\") || [];\n\n\nif(msg.payload==true){\n  // 2) Determinar la fecha a grabar como Date\n  let dateObj;\n  if (typeof msg.payload === \"string\") {\n    dateObj = new Date(msg.payload);\n  } else if (msg.payload && msg.payload.fecha) {\n    dateObj = new Date(msg.payload.fecha);\n  } else {\n    dateObj = new Date();\n  }\n\n  // 3) Formatear en horario de Argentina y estilo dd/mm/yyyy HH:MM:SS\n  const nuevaFecha = dateObj.toLocaleString('es-AR', {\n    timeZone: 'America/Argentina/Buenos_Aires',\n    year: 'numeric',\n    month: '2-digit',\n    day: '2-digit',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit'\n  });\n  \n  // 4) Insertar al principio (más reciente primero)\n  historial.unshift({ fecha: nuevaFecha });\n\n  // 5) Limitar tamaño a las últimas 20 entradas (opcional)\n  const MAX = 20;\n  if (historial.length > MAX) {\n    historial = historial.slice(0, MAX);\n  }\n  // 6) Guardar el array actualizado y enviarlo\n  flow.set(\"historialFechas\", historial);\n}\n\nmsg.payload = historial;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 1960,
+        "wires": [
+            [
+                "e1989649e33f1fcf"
+            ]
+        ]
+    },
+    {
+        "id": "e1989649e33f1fcf",
+        "type": "ui_template",
+        "z": "480bd8712a3e79cf",
+        "group": "f5074336b5d76608",
+        "name": "Historial Detecciones",
+        "order": 5,
+        "width": 8,
+        "height": 6,
+        "format": "<style>\n    .historial-table {\n        width: 100%;\n        border-collapse: collapse;\n    }\n\n    .historial-table th,\n    .historial-table td {\n        border: 1px solid #ccc;\n        padding: 6px;\n    }\n\n    .empty {\n        font-style: italic;\n        color: #999;\n    }\n</style>\n\n<!-- Mensaje si no hay datos -->\n<div ng-if=\"!msg.payload || msg.payload.length===0\" class=\"empty\">\n    No hay detecciones registradas.\n</div>\n\n<!-- Tabla de historial -->\n<table ng-if=\"msg.payload && msg.payload.length>0\" class=\"historial-table\">\n    <thead>\n        <tr>\n            <th>Fecha de detección</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr ng-repeat=\"row in msg.payload\">\n            <td>{{row.fecha}}</td>\n        </tr>\n    </tbody>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1380,
+        "y": 1960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "91221746bea274ae",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "Gestionar Alarma",
+        "func": "// Function “Gestionar Alarma”\nconst presence = msg.payload === true;\nconst silenciada = flow.get(\"alarmaSilenciada\") || false;\n\nif (presence && !silenciada) {\n  // 1) activar buzzer/LED\n  let out = { topic:\"arqAvanzada/alarma/activar\", payload:true };\n  // 2) guardar la detección en el historial\n  let hist = flow.get(\"historialFechas\")||[];\n  hist.unshift( new Date().toLocaleString() );\n  flow.set(\"historialFechas\", hist);\n  // 3) programar auto-off en 15s\n  setTimeout(()=>{\n    node.send({ topic:\"arqAvanzada/alarma/activar\", payload:false });\n    flow.set(\"alarmaSilenciada\", false);\n  }, 15000);\n  return out;\n} else {\n  // apagar (o no encender si presence=false o ya silenciada)\n  flow.set(\"alarmaSilenciada\", false);\n  return { topic:\"arqAvanzada/alarma/activar\", payload:false };\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 1880,
+        "wires": [
+            [
+                "f98ade9e79cfcba9"
+            ]
+        ]
+    },
+    {
+        "id": "ca890ba86b691b5c",
+        "type": "change",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"tabs\":{\t        \"hide\":[\t            \"Usuario\"\t        ],\t        \"show\":[\t            \"Login\"\t        ]\t    }\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1220,
+        "wires": [
+            [
+                "e0ebfc5447df0357"
+            ]
+        ]
+    },
+    {
+        "id": "0da61f61c5b5a6c3",
+        "type": "ui_button",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "group": "d2db7e91a6e1734b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Log Out",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 420,
+        "y": 1220,
+        "wires": [
+            [
+                "ca890ba86b691b5c"
+            ]
+        ]
+    },
+    {
+        "id": "c60f81599adcc2b8",
+        "type": "ui_button",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "group": "a8a72c7dd51e7afa",
+        "order": 18,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Guardar Email",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 780,
+        "y": 160,
+        "wires": [
+            [
+                "2587707f182eb8b7"
+            ]
+        ]
+    },
+    {
+        "id": "2587707f182eb8b7",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "GuardarEmail",
+        "func": "// 2) lee el email guardado en flow  \nconst email = flow.get(\"notificarEmail\");\nglobal.set(\"notificarEmail\", email);\n// 3) prepara toast  \nmsg.topic = \"emailGuardado\";\nmsg.payload = `✅ Email guardado: \\n${ email }`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 160,
+        "wires": [
+            [
+                "da38c1f673b7a584",
+                "0fe64a243ffab013"
+            ]
+        ]
+    },
+    {
+        "id": "da38c1f673b7a584",
+        "type": "ui_toast",
+        "z": "480bd8712a3e79cf",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1230,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f98ade9e79cfcba9",
+        "type": "switch",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1270,
+        "y": 1820,
+        "wires": [
+            [
+                "d15c2f7b6548a188"
+            ]
+        ]
+    },
+    {
+        "id": "d15c2f7b6548a188",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "Preparar Email",
+        "func": "// 1) recupera la dirección guardada\nconst email = global.get(\"notificarEmail\");\nif (!email) return null;        // cancela si no hay\n\n// 2) Ponemos destinatario y asunto\nmsg.to = email;\nmsg.topic = \"¡Alerta: mascota en ventana!\";\n\n// 3) El cuerpo del mail\nmsg.payload = `Se detectó una mascota autorizada el ${new Date().toLocaleString()}`;\n\n// 4) devolver msg para Email Out\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 1820,
+        "wires": [
+            [
+                "ebec3f4e930b4566"
+            ]
+        ]
+    },
+    {
+        "id": "0fe64a243ffab013",
+        "type": "ui_text",
+        "z": "480bd8712a3e79cf",
+        "group": "a8a72c7dd51e7afa",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "name": "txtEmail",
+        "label": "Email",
+        "format": "{{msg.payload.email}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1220,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ebec3f4e930b4566",
+        "type": "e-mail",
+        "z": "480bd8712a3e79cf",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "",
+        "dname": "Email Out",
+        "x": 1640,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "16b8dfde7aeaaf26",
+        "type": "mqtt out",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "topic": "arqAvanzada/systemStatus/interval/dashboard",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc2008059d9a2c4",
+        "x": 1300,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "eb092c07a52574b2",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "Send Interval",
+        "func": "//msg.payload = flow.get(\"horarioActivo\").inicio + flow.get(\"horarioActivo\").fin;\nmsg.payload = msg.payload.inicio + \",\" + msg.payload.fin;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 900,
+        "wires": [
+            [
+                "16b8dfde7aeaaf26"
+            ]
+        ]
+    },
+    {
+        "id": "d37a6095ef677e38",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "milisecondsToTime",
+        "func": "let ms = msg.payload; // ej. 61200000 para 17:00\n\nlet horas = Math.floor(ms / (1000 * 60 * 60));\nlet minutos = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));\n\n// Formatear a 2 dígitos\nlet horaTexto = horas.toString().padStart(2, '0') + \":\" + minutos.toString().padStart(2, '0');\n\nmsg.payload = horaTexto;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 260,
+        "wires": [
+            [
+                "6b1f42ce736722d6"
+            ]
+        ]
+    },
+    {
+        "id": "850a5ab6936842df",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "milisecondsToTime",
+        "func": "let ms = msg.payload; // ej. 61200000 para 17:00\n\nlet horas = Math.floor(ms / (1000 * 60 * 60));\nlet minutos = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));\n\n// Formatear a 2 dígitos\nlet horaTexto = horas.toString().padStart(2, '0') + \":\" + minutos.toString().padStart(2, '0');\n\nmsg.payload = horaTexto;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 300,
+        "wires": [
+            [
+                "df00c5b1c575722c"
+            ]
+        ]
+    },
+    {
+        "id": "d2d5f859c1b62435",
+        "type": "mqtt in",
+        "z": "480bd8712a3e79cf",
+        "name": "SystemStatusCheck",
+        "topic": "arqAvanzada/SystemStatus/check",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "6bc2008059d9a2c4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 910,
+        "y": 1000,
+        "wires": [
+            [
+                "e9056c8212d71019"
+            ]
+        ]
+    },
+    {
+        "id": "e9056c8212d71019",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "Send Interval",
+        "func": "\nif (flow.get(\"horarioActivo\") == null \n    || flow.get(\"horarioActivo\").inicio==null \n    || flow.get(\"horarioActivo\").fin==null) {\n        msg.payload = \"00:00,00:00\"; \n    }\n    else{\n        msg.payload = flow.get(\"horarioActivo\").inicio +\n            ',' + flow.get(\"horarioActivo\").fin;\n    }\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 980,
+        "wires": [
+            [
+                "16b8dfde7aeaaf26"
+            ]
+        ]
+    },
+    {
+        "id": "5e53033ca02fdc94",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "Formatear mascota",
+        "func": "// Recogemos los valores que guardamos en flow cuando cambian los inputs\nconst nombre = flow.get(\"nuevoNombre\") || msg.payload.nombre;\nconst especie = flow.get(\"nuevoEspecie\") || msg.payload.especie;\nconst edad = flow.get(\"nuevoEdad\") || msg.payload.edad;\n\nmsg.payload = nombre + \",\" + especie + \",\" + edad;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 660,
+        "wires": [
+            [
+                "020fa2d68b579416"
+            ]
+        ]
+    },
+    {
+        "id": "fd9e02cbd8fc56ef",
+        "type": "mqtt in",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "topic": "arqAvanzada/agregarMascota",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "6bc2008059d9a2c4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1280,
+        "y": 560,
+        "wires": [
+            [
+                "109dfcc455c78522"
+            ]
+        ]
+    },
+    {
+        "id": "0f9bc28ba5463499",
+        "type": "change",
+        "z": "480bd8712a3e79cf",
+        "name": "BooleanToNumber",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 2200,
+        "wires": [
+            [
+                "5dd4040df2582122",
+                "7b7c674e360ffc1c"
+            ]
+        ]
+    },
+    {
+        "id": "7b7c674e360ffc1c",
+        "type": "debug",
+        "z": "480bd8712a3e79cf",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "bfeb4a93f65fdd28",
+        "type": "function",
+        "z": "480bd8712a3e79cf",
+        "name": "Guardar Horario",
+        "func": "let horariosList=msg.payload.split(\",\")\n\nconst horario = {\n  inicio: horariosList[0],\n  fin: horariosList[1]\n};\nflow.set(\"horarioActivo\", horario);\nmsg.payload = horario;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 740,
+        "wires": [
+            [
+                "2748596badfad048"
+            ]
+        ]
+    },
+    {
+        "id": "20aa73969e4c867d",
+        "type": "mqtt in",
+        "z": "480bd8712a3e79cf",
+        "name": "",
+        "topic": "arqAvanzada/systemStatus/interval/esp32",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "6bc2008059d9a2c4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 680,
+        "y": 740,
+        "wires": [
+            [
+                "bfeb4a93f65fdd28"
+            ]
+        ]
     }
 ]
