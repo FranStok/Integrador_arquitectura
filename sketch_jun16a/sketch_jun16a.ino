@@ -33,7 +33,8 @@ bool isAlarmOn = false;
 
 bool isSystemActivated = true;
 
-
+String registeredIds[20];
+int registeredIdsLength = 0;
 
 
 void RFID_setup() {
@@ -53,9 +54,16 @@ void setup() {
 
   Serial.begin(9600);
   //Conexiones
+  unsigned long tiempoInicioIntentoWifi = 0;
   set_wifi();
-  setupClientMQTT();
-  delay(100);
+  while (!wifiIsSet) {
+    tiempoInicioIntentoWifi = millis();
+    ///Espero 10 segundos para reintentar de vuelta.
+    while (millis() - tiempoInicioIntentoWifi < 10000) {
+      readCommands();
+    }
+  }
+  delay(500);
   //RFID
   RFID_setup();
 }
@@ -110,6 +118,18 @@ bool leer_bloque(int bloque) {
   return true;
 }
 
+int isIdRegistered(String id) {
+  id.toLowerCase();
+  for (int i = 0; i < registeredIdsLength; i++) {
+    String currentId = registeredIds[i];
+    currentId.toLowerCase();
+    if (id == currentId) {
+      return i;
+    }
+  }
+  return -1;
+}
+
 void RFID_loop() {
   int sector = -1;
   if (!rfid.PICC_IsNewCardPresent() || !rfid.PICC_ReadCardSerial()) {
@@ -118,7 +138,7 @@ void RFID_loop() {
   String uidString = getTagId();
   uidString.toUpperCase();
   Serial.println("TAG UID: " + uidString);
-
+  if (isIdRegistered(uidString) == -1) return;
   for (int i = 0; i < bloquesUtilizadosLength; i++) {
     int auxSector = bloquesUtilizados[i] / 4;  //Tengo que autorizar una vez por sector.
 
@@ -198,14 +218,14 @@ bool writeInfoToTag(String information[], int informationLength) {
     Serial.println("No acerco ningun TAG.");
     return false;
   }
-  String mascotaInfo = getTagId() + ",";
+  String tagId = getTagId();
+  String mascotaInfo = tagId + ",";
   for (int i = 0; i < informationLength; i++) {
     int auxSector = bloquesUtilizados[i] / 4;  //Tengo que autorizar una vez por sector.
 
     String field = information[i];
 
     mascotaInfo = mascotaInfo + field + ((i == informationLength - 1) ? "" : ",");
-    Serial.println(mascotaInfo);
     if (field.length() > 16 || field.length() == 0) {
       Serial.println("Campo muy largo o vacio. Debe ser menor a 17 caracteres.");
       haltRfid();
@@ -227,6 +247,9 @@ bool writeInfoToTag(String information[], int informationLength) {
       return false;
     }
   }
+  if (isIdRegistered(tagId) == -1) {
+    registeredIds[registeredIdsLength++] = tagId;
+  };
   Serial.println("✅ Información escrita en la tarjeta con éxito.");
   publishAgregarMascota(mascotaInfo);
   haltRfid();

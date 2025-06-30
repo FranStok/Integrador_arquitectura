@@ -9,7 +9,9 @@ struct Horario {
   int minutos;
 };
 
+extern bool wifiIsSet;
+
 bool writeInfoToTag(String information[], int informationLength);
 void setTagWorkingTime(String information[], int informationLength);
-
+int isIdRegistered(String id);
 #endif

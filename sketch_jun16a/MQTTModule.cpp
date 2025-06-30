@@ -9,9 +9,11 @@
 
 const char* broker = "test.mosquitto.org";
 const char* topicAlarma = "arqAvanzada/alarma";
-const char* topicToggleSystemStatusIntervalDashboard = "arqAvanzada/systemStatus/interval/dashboard";
-const char* topicToggleSystemStatusIntervalEsp32 = "arqAvanzada/systemStatus/interval/esp32";
+const char* topicSystemStatusIntervalDashboard = "arqAvanzada/systemStatus/interval/dashboard";
+const char* topicSystemStatusIntervalEsp32 = "arqAvanzada/systemStatus/interval/esp32";
+const char* topicSystemStatusRegisteredId = "arqAvanzada/systemStatus/registeredId";
 const char* topicToggleSystemStatus = "arqAvanzada/systemStatus/toggle";
+const char* topicCheckSystemStatusRegisteredIds = "arqAvanzada/SystemStatus/registeredIds/check";
 const char* topicCheckSystemStatus = "arqAvanzada/SystemStatus/check";
 const char* topicAgregarMascota = "arqAvanzada/agregarMascota";
 const char* topicInformacionMascota = "arqAvanzada/informacionMascota";
@@ -29,11 +31,17 @@ void setupClientMQTT() {
   client.setCallback(callback);
 }
 
+void publishCheckSystemStatus() {
+  client.publish(topicCheckSystemStatus, "");
+  delay(500);
+}
+
+void publishCheckRegisteredIds() {
+  client.publish(topicCheckSystemStatusRegisteredIds, "");
+}
 
 void connectMQTT() {
   while (!client.connected()) {
-    Serial.println("Intentando conectar a MQTT");
-
     String clientId = "ESP32Client-FranCAECE";
 
     if (client.connect(clientId.c_str())) {
@@ -41,8 +49,11 @@ void connectMQTT() {
       client.subscribe(topicAlarma);
       client.subscribe(topicInformacionMascota);
       client.subscribe(topicToggleSystemStatus);
-      client.subscribe(topicToggleSystemStatusIntervalDashboard);
-      checkSystemStatus();
+      client.subscribe(topicSystemStatusIntervalDashboard);
+      client.subscribe(topicSystemStatusRegisteredId);
+      publishCheckSystemStatus();
+      delay(100);
+      publishCheckRegisteredIds();
     } else {
       delay(1000);
     }
@@ -66,6 +77,8 @@ void publishMascotaPresente(bool isPresent) {
   if (isPresent) client.publish(topicPresenciaMascotaFecha, getTime().c_str());
 }
 
+
+
 void procesarComandoMQTT(String topic, String comando) {
   if (topic == topicAlarma) {
     if (comando == "silenciar") {
@@ -81,24 +94,28 @@ void procesarComandoMQTT(String topic, String comando) {
     isSystemActivated = comando == "false" ? false : true;
     return;
   }
-  if (topic == topicToggleSystemStatusIntervalDashboard) {
+  if (topic == topicSystemStatusIntervalDashboard) {
     String contenido[2];
     int contenidoLength = splitString(comando, ',', contenido, 2);
     setTagWorkingTime(contenido);
     return;
   }
+  if (topic == topicSystemStatusRegisteredId) {
+    if (comando == "") {
+      registeredIdsLength = 0;
+    } else {
+      registeredIdsLength = splitString(comando, ',', registeredIds, 20);
+    }
+    Serial.println("✅ ids registrados recibidos con exito.");
+    return;
+  }
 }
 
-void publishAgregarMascota(String mascotaInfo){
+void publishAgregarMascota(String mascotaInfo) {
   client.publish(topicAgregarMascota, mascotaInfo.c_str());
   delay(500);
 }
-void publishUpdateSystemStatusInterval(String intervalo){
-  client.publish(topicToggleSystemStatusIntervalEsp32, intervalo.c_str());
-  delay(500);
-}
-
-void checkSystemStatus() {
-  client.publish(topicCheckSystemStatus, "");
+void publishUpdateSystemStatusInterval(String intervalo) {
+  client.publish(topicSystemStatusIntervalEsp32, intervalo.c_str());
   delay(500);
 }

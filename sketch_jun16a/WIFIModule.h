@@ -4,7 +4,8 @@
 #include <WiFi.h>
 #include "time.h"
 
-void set_wifi();
+bool set_wifi();
 String getTime();
+void setWifiCredentials(String ssid, String password);
 struct tm* getTimeStruct();
 #endif
