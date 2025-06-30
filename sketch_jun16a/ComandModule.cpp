@@ -26,6 +26,7 @@ void readCommands() {
     }
     return;
   }
+  //ejemplo setwifi: setwifi(ssid,password)
   if (comandoAux.startsWith("setwifi(")) {
     if (comandoAux.endsWith(")")) {
       processSetWifi(comando.substring(8, comando.length() - 1));

@@ -8,4 +8,5 @@ bool set_wifi();
 String getTime();
 void setWifiCredentials(String ssid, String password);
 struct tm* getTimeStruct();
+void checkWifiAndTryReconect();
 #endif

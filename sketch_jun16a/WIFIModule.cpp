@@ -55,6 +55,22 @@ bool set_wifi() {
   return false;
 }
 
+void checkWifiAndTryReconect() {
+  unsigned long tiempoInicioIntentoWifi = 0;
+  if (WiFi.status() != WL_CONNECTED) {
+    wifiIsSet = false;
+    set_wifi();
+    while (!wifiIsSet) {
+      tiempoInicioIntentoWifi = millis();
+      ///Espero 10 segundos para reintentar de vuelta.
+      while (millis() - tiempoInicioIntentoWifi < 10000) {
+        readCommands();
+      }
+      if (!wifiIsSet) set_wifi();
+    }
+  }
+}
+
 void setWifiCredentials(String ssid, String password) {
   preferences.begin("wifi", false);
   preferences.putString("ssid", ssid);
@@ -68,6 +84,7 @@ void setWifiCredentials(String ssid, String password) {
     while (millis() - tiempoInicioIntentoWifi < 10000) {
       readCommands();
     }
+    set_wifi();
   }
 }
 

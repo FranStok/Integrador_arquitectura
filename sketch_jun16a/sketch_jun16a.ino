@@ -54,15 +54,7 @@ void setup() {
 
   Serial.begin(9600);
   //Conexiones
-  unsigned long tiempoInicioIntentoWifi = 0;
-  set_wifi();
-  while (!wifiIsSet) {
-    tiempoInicioIntentoWifi = millis();
-    ///Espero 10 segundos para reintentar de vuelta.
-    while (millis() - tiempoInicioIntentoWifi < 10000) {
-      readCommands();
-    }
-  }
+  checkWifiAndTryReconect();
   delay(500);
   //RFID
   RFID_setup();
@@ -272,6 +264,7 @@ bool isOnWorkingTime() {
 }
 
 void loop() {
+  checkWifiAndTryReconect();
   if (!client.connected()) connectMQTT();
   client.loop();
   if (isSystemActivated) {
